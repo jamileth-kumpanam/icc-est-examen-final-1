@@ -114,7 +114,7 @@ public class MaquinaControllerTest {
     public void testExplotarGrupo() {
         List<Maquina> maquinas = crearMaquinas();
         Map<Integer, Queue<Maquina>> mapa = controller.agruparPorRiesgo(maquinas);
-        Stack<Maquina> resultado = controller.explotarGrupo(mapa);
+        Stack<Maquina> resultado = controller.explotarGrupo();
 
         ValidacionesMaquina.validarResultadoD(resultado, maquinas);
     }
